@@ -62,8 +62,6 @@ console.log(firstTime);
 console.log(tFrequency);
 console.log(tMinutesTillTrain);
 
-});
-
 // First Time 
 var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
 console.log(firstTimeConverted);
@@ -88,4 +86,15 @@ console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
 console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
+  // Create the new row
+  var newRow = $("<tr>").append(
+    $("<td>").text(trainName),
+    $("<td>").text(destination),
+    $("<td>").text(firstTime),
+    $("<td>").text(tFrequency),
+    $("<td>").text(tMinutesTillTrain)
+  );
 
+  // Append the new row to the table
+  $("#employee-table > tbody").append(newRow);
+});
