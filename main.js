@@ -96,5 +96,5 @@ console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
   );
 
   // Append the new row to the table
-  $("#employee-table > tbody").append(newRow);
+  $("#hogwarts-table > tbody").append(newRow);
 });
